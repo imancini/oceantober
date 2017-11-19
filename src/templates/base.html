@@ -1,0 +1,24 @@
+{% load staticfiles %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+    <title>Oceantober</title>
+    {% include 'head_css.html' %}
+  </head>
+
+  <body>
+    {% include 'navbar.html' %}  
+    <main role="main" class="container-fluid">
+      {% block jumbotron %}
+      {% endblock %}  
+      {% block content %}
+      {% endblock %}  
+    </main>
+    {% include "javascript.html" %}   
+  </body>
+</html>

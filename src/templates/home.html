@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+
+<style>
+{% block style %}
+
+{% endblock %}
+</style>
+
+
+{% block jumbotron %}
+<div class="jumbotron">
+	<div class="container">
+		<div class="row" align="center">
+			<div class='col-sm-12'>
+	        	<h1>Oceantober</h1>
+	        	<p class="lead">Oceantober is a nonprofit dedicated to providing cleaner oceans and building community through beach clean ups and the "Oceantober Challenge" where participants jump in the ocean for all 31 days of October.</p>
+	        	<a class="btn btn-lg btn-primary" href="{% url 'home' %}" role="button">Join Us &raquo;</a>
+			</div>		
+		</div>
+		<div class="row">
+			<div class='col-sm-12' style="height:50px">
+			</div>	
+			<div class="col-sm-12 videoWrapper">
+				<iframe src="https://player.vimeo.com/video/241808191" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    		</div>
+		</div>
+	</div>
+</div>
+{% endblock %}    
+
+{% block content %}
+	
+<div class="container">
+<!-- <div class="col-12 col-sm-3 float-right">
+	<h1> Newsletter </h1>
+	<form method='POST' action=''>{% csrf_token %}
+	{{ form|crispy }}
+	<input class='btn btn-primary' type='submit' value='Sign Up' />	
+	</form>	
+</div> -->
+<div class="col-12" style="margin-bottom:25px" align="center" >
+	<h1> What We Do </h1>
+</div>
+<div class="row">	
+	<div class='col-12 col-md-3' align="center">
+		<p class='lead' style='font-weight:bold;'>Marine Conservation</p>
+		<p class='lead'> At each of our daily dips in October, we strive to better the beaches that we visit. This ranges from hosting beach cleanups, to promoting policies and habits that limit waste and pollution reaching the ocean.</p>
+	</div>
+
+	<div class='col-12 col-md-3' align="center">
+		<p class='lead' style='font-weight:bold;'>Outdoor Education</p>
+		<p class='lead'> Each week of Oceantober we hold a community gathering highlighting ocean topics such as marine conservation efforts, the effects of sea level rise, and local community efforts to protect the ocean.</p>
+	</div>
+
+	<div class='col-12 col-md-3' align="center">
+		<p class='lead' style='font-weight:bold;'>Community Building</p>
+		<p class='lead'> Every day of October we invite anyone and everyone to join us in Oceantober to feel the thrill of jumping in that chilly October water. Maybe you will meet a new friend, or learn something new, either way, we are glad to have you join us!</p>
+	</div>
+
+	<div class="col-12 col-md-3">
+		<h1> Newsletter </h1>
+		<form method='POST' action=''>{% csrf_token %}
+		{{ form|crispy }}
+		<input class='btn btn-primary' type='submit' value='Sign Up' />	
+		</form>	
+	</div>
+
+
+</div>
+</div>
+
+{% endblock %}

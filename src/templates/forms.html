@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class='row' align='center' style="margin-top:30px;">
+	<div class="col">
+    </div>
+	<div class='col-sm-6'>
+		<h1> Contact Us</h1>
+	</div>
+	<div class="col">
+    </div>	
+</div>	
+<div class='row'>
+	<div class="col">
+    </div>
+	<div class='col-sm-6'>
+
+		<form method='POST' action=''>{% csrf_token %}
+		{{ form|crispy }}
+
+		<input class='btn btn-default' type='submit' value='Submit' />	
+
+		</form>	
+	</div>
+	<div class="col">
+    </div>
+</div>
+{% endblock %}
